@@ -1,0 +1,155 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin Girişi</title>
+    <style>
+        @@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background: #262626;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 500px;
+            background: #fff;
+            border-radius: 20px;
+        }
+
+            .container .box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255,255,255,.2);
+                box-shadow: none;
+                transition: .9s;
+                border-radius: 20px;
+                box-sizing: border-box;
+                padding: 30px 40px;
+                text-align: center;
+            }
+
+            .container:hover .box {
+                top: 20px;
+                left: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,.5);
+            }
+
+            .container .box img {
+                position: relative;
+                width: 150px;
+                height: 100px;
+                margin-bottom: 15px
+            }
+
+            .container .box h1 {
+                font-size: 20px;
+                margin-bottom: 35px;
+            }
+
+            .container .box .row {
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+                .container .box .row::before {
+                    font-family: 'fontAwesome';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                }
+
+                .container .box .row:nth-of-type(1)::before {
+                    content: '\f007';
+                }
+
+                .container .box .row:nth-of-type(2)::before {
+                    content: '\f023';
+                }
+
+                .container .box .row input {
+                    border: none;
+                    outline: none;
+                    font-size: 20px;
+                    height: 20px;
+                    width: 100%;
+                    padding: 20px 40px;
+                    box-sizing: border-box;
+                    border-bottom: 2px solid #262626;
+                }
+
+                    .container .box .row input:focus {
+                        border-color: #ff5722;
+                    }
+
+            .container .box a {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                color: #262626;
+            }
+
+                .container .box a.login {
+                    color: #fff;
+                    background: #ff5722;
+                    padding: 17px 0;
+                    box-sizing: border-box;
+                    font-size: 20px;
+                    border-radius: 50px;
+                    margin: 40px 0 20px;
+                    width: 100%;
+                }
+
+        .button {
+            color: #fff;
+            background: #ff5722;
+            padding: 17px 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            border-radius: 50px;
+            margin: 40px 0 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("AdminGiriş", "admingirişi", FormMethod.Post))
+    {
+        <div class="container">
+            <div class="box">
+                <h1>Admin Girişi</h1>
+                <div class="row">
+                    <input type="text" name="adminkullaniciadi" placeholder="Kullanıcı Adı" required>
+                </div>
+                <div class="row">
+                    <input type="password" name="adminşifre" placeholder="Şifre" required>
+                </div>
+                <button class="button"> Giriş Yap</button>
+                <a href="/kullanıcıgiriş/KullanıcıGiriş">Üye Girişi</a>
+            </div>
+        </div>
+    }
+</body>
+</html>

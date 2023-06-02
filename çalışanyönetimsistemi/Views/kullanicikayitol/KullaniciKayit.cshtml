@@ -1,0 +1,216 @@
+﻿
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Kayıt Ol </title>
+    <style>
+        *:after, *:before {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .wrapper {
+            width: 100vw;
+            min-height: 100vh;
+            background-color: #91c78866;
+            padding: 30px 15px;
+            background: linear-gradient(45deg, #90d18566, #91c78866);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+        }
+
+            .login .login-form {
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: auto;
+                max-width: 50%;
+                background-color: #fff;
+                padding: 60px 45px;
+            }
+
+        @@media only screen and (max-width: 767.98px) {
+            .login .login-form {
+                max-width: 100%;
+            }
+        }
+
+        @@media only screen and (max-width: 575.98px) {
+            .login .login-form {
+                padding: 40px 20px;
+            }
+        }
+
+        .login .login-form .login-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            color: #393939;
+            margin-bottom: 25px;
+        }
+
+        .login .login-form .form-wrapper .input-wrapper .label, .login .login-form .form-wrapper .input-wrapper .input {
+            display: block;
+            width: 100%;
+        }
+
+        .login .login-form .form-wrapper .input-wrapper .label {
+            padding-bottom: 3px;
+            font-size: 0.9rem;
+            color: #393939;
+        }
+
+        .login .login-form .form-wrapper .input-wrapper .input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1.5px solid #cae9c4;
+        }
+
+        .login .login-form .form-wrapper .action-help {
+            padding: 20px 0;
+        }
+
+            .login .login-form .form-wrapper .action-help .help-link {
+                color: #583177;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+                font-size: 0.9rem;
+            }
+
+                .login .login-form .form-wrapper .action-help .help-link:hover {
+                    color: #fe7092;
+                }
+
+        .login .login-form .form-wrapper .actions {
+            display: flex;
+            flex-flow: column;
+        }
+
+            .login .login-form .form-wrapper .actions .action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 10px 0px;
+                margin-bottom: 15px;
+                border-radius: 25px;
+                color: #fff;
+                background-color: #184d47;
+                text-decoration: none;
+                border: 1px solid #184d47;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                font-size: 0.9rem;
+            }
+
+                .login .login-form .form-wrapper .actions .action:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 5px 25px -15px rgba(0, 0, 0, 0.5);
+                }
+
+            .login .login-form .form-wrapper .actions .signup-action {
+                margin: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+                .login .login-form .form-wrapper .actions .signup-action .signup-link {
+                    color: #184d47;
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                }
+
+                    .login .login-form .form-wrapper .actions .signup-action .signup-link:hover {
+                        transform: scale(1.1);
+                        box-shadow: 0 5px 25px -15px rgba(0, 0, 0, 0.5);
+                    }
+
+        .login .login-decoration {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: auto;
+            background-image: url(https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+            background-position: center;
+            background-size: cover;
+        }
+
+        @@media only screen and (max-width: 767.98px) {
+            .login .login-decoration {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" target="_blank">
+        <div class="wrapper">
+            <div class="login">
+                <div class="login-form">
+                    <h1 class="login-title">Kullanıcı Kayıt Ol</h1>
+                    <div class="form-wrapper">
+                        <div class="input-wrapper">
+                            <label class="label" for="ad">Ad</label>
+                            <input class="input" type="text" id="ad" name="ad" required autocomplete="off" />
+                        </div><br>
+                        <div class="input-wrapper">
+                            <label class="label" for="soyad">Soyad</label>
+                            <input class="input" type="text" id="soyad" name="soyad" required autocomplete="off" />
+                        </div><br>
+                        <div class="input-wrapper">
+                            <label class="label" for="email">Email</label>
+                            <input class="input" type="email" id="email" name="email" required autocomplete="off" />
+                        </div><br>
+                        <div class="input-wrapper">
+                            <label class="label" for="tel">Tel</label>
+                            <input class="input" type="tel" maxlength="11" id="tel" name="tel" required autocomplete="off" />
+                        </div><br>
+                        <div class="input-wrapper">
+                            <label class="label" for="kullanıcıadı">Kullanıcı Adı</label>
+                            <input class="input" type="text" id="kullanıcıadı" name="kullaniciadi" required autocomplete="off" />
+                        </div><br>
+                        <div class="input-wrapper">
+                            <label class="label" for="şifre">Şifre</label>
+                            <input class="input" type="password" id="password" name="şifre" required />
+                        </div>
+                        <br />
+                        <div class="actions">
+                            <input class="action" type="submit" value="Kayıt Ol" />
+                            <div class="signup-action">
+                                Hesabın Var Mı? &nbsp <a class="signup-link" href="/kullanıcıgiriş/KullanıcıGiriş">Giriş Yap</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="login-decoration">
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+

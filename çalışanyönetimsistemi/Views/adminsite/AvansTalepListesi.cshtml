@@ -1,0 +1,81 @@
+﻿@using çalışanyönetimsistemi.Models.Baglantisql
+@model List<avanstalep>
+@{
+    ViewBag.Title = "AvansTalepListesi";
+    Layout = "~/Views/layout/AdminLayout.cshtml";
+}
+
+<style>
+
+    .button2 {
+        width: 40px;
+        height: 20px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .güncellebuton {
+        width: 40px;
+        height: 20px;
+        background-color: green;
+        font-size: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        box-shadow: 0 5px 10px #e1e5ee;
+        background-color: white;
+        text-align: left;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    thead {
+        box-shadow: 0 5px 10px #e1e5ee;
+    }
+
+    th {
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    td {
+        padding: 1rem 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2962ff;
+    }
+</style>
+
+<table>
+
+    <tr>
+        <th>AVANS TALEP İD</th>
+        <th>TARİH</th>
+        <th>AD SOYAD</th>
+        <th>AVANS MİKTAR</th>
+        <th>AÇIKLAMA</th>
+    </tr>
+    <tbody>
+        @foreach (var veri in Model)
+        {
+            <tr>
+                <th>@veri.avanstalepid</th>
+                <td>@veri.tarih</td>
+                <td>@veri.adsoyad</td>
+                <td>@veri.avansmiktar </td>
+                <td>@veri.açıklama</td>
+            </tr>
+        }
+    </tbody>
+</table>

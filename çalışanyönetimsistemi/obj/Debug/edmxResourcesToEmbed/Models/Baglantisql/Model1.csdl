@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="çalışanyönetimsistemiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admingirişi">
+    <Key>
+      <PropertyRef Name="adminid" />
+    </Key>
+    <Property Name="adminid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adminkullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adminşifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kullanicigirişi">
+    <Key>
+      <PropertyRef Name="kullaniciid" />
+    </Key>
+    <Property Name="kullaniciid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="şifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="çalışanyönetimsistemiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admingirişi" EntityType="Self.admingirişi" />
+    <EntitySet Name="kullanicigirişi" EntityType="Self.kullanicigirişi" />
+  </EntityContainer>
+</Schema>

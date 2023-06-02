@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="çalışanyönetimsistemiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admingirişi">
+    <Key>
+      <PropertyRef Name="adminid" />
+    </Key>
+    <Property Name="adminid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adminkullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adminşifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="avanstalep">
+    <Key>
+      <PropertyRef Name="avanstalepid" />
+    </Key>
+    <Property Name="avanstalepid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adsoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="avansmiktar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="çalışanbilgileri">
+    <Key>
+      <PropertyRef Name="çalışanid" />
+    </Key>
+    <Property Name="çalışanid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="çalışanad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="işebaşlamatarihi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="görev" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="maaş" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="iletişim">
+    <Key>
+      <PropertyRef Name="iletişimid" />
+    </Key>
+    <Property Name="iletişimid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="izintalep">
+    <Key>
+      <PropertyRef Name="izintalepid" />
+    </Key>
+    <Property Name="izintalepid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="çalışanad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="izinbaslangıctarihi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="istenilenizinmiktar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kullanicigirişi">
+    <Key>
+      <PropertyRef Name="kullaniciid" />
+    </Key>
+    <Property Name="kullaniciid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="şifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="çalışanyönetimsistemiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admingirişi" EntityType="Self.admingirişi" />
+    <EntitySet Name="avanstalep" EntityType="Self.avanstalep" />
+    <EntitySet Name="çalışanbilgileri" EntityType="Self.çalışanbilgileri" />
+    <EntitySet Name="iletişim" EntityType="Self.iletişim" />
+    <EntitySet Name="izintalep" EntityType="Self.izintalep" />
+    <EntitySet Name="kullanicigirişi" EntityType="Self.kullanicigirişi" />
+  </EntityContainer>
+</Schema>

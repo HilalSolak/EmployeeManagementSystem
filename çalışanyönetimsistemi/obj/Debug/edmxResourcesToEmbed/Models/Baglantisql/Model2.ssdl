@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="çalışanyönetimsistemiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admingirişi">
+    <Key>
+      <PropertyRef Name="adminid" />
+    </Key>
+    <Property Name="adminid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adminkullaniciadi" Type="varchar(max)" />
+    <Property Name="adminşifre" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="avanstalep">
+    <Key>
+      <PropertyRef Name="avanstalepid" />
+    </Key>
+    <Property Name="avanstalepid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tarih" Type="varchar(max)" />
+    <Property Name="adsoyad" Type="varchar(max)" />
+    <Property Name="avansmiktar" Type="varchar(max)" />
+    <Property Name="açıklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="çalışanbilgileri">
+    <Key>
+      <PropertyRef Name="çalışanid" />
+    </Key>
+    <Property Name="çalışanid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="çalışanad" Type="varchar(max)" />
+    <Property Name="soyad" Type="varchar(max)" />
+    <Property Name="tc" Type="varchar(max)" />
+    <Property Name="işebaşlamatarihi" Type="varchar(max)" />
+    <Property Name="görev" Type="varchar(max)" />
+    <Property Name="maaş" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="iletişim">
+    <Key>
+      <PropertyRef Name="iletişimid" />
+    </Key>
+    <Property Name="iletişimid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="varchar(max)" />
+    <Property Name="email" Type="varchar(max)" />
+    <Property Name="telefon" Type="varchar(max)" />
+    <Property Name="mesaj" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="izintalep">
+    <Key>
+      <PropertyRef Name="izintalepid" />
+    </Key>
+    <Property Name="izintalepid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="çalışanad" Type="varchar(max)" />
+    <Property Name="soyad" Type="varchar(max)" />
+    <Property Name="tc" Type="varchar(max)" />
+    <Property Name="izinbaslangıctarihi" Type="varchar(max)" />
+    <Property Name="istenilenizinmiktar" Type="varchar(max)" />
+    <Property Name="açıklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="kullanicigirişi">
+    <Key>
+      <PropertyRef Name="kullaniciid" />
+    </Key>
+    <Property Name="kullaniciid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="varchar(max)" />
+    <Property Name="soyad" Type="varchar(max)" />
+    <Property Name="email" Type="varchar(max)" />
+    <Property Name="tel" Type="varchar(max)" />
+    <Property Name="kullaniciadi" Type="varchar(max)" />
+    <Property Name="şifre" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="çalışanyönetimsistemiModelStoreContainer">
+    <EntitySet Name="admingirişi" EntityType="Self.admingirişi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="avanstalep" EntityType="Self.avanstalep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="çalışanbilgileri" EntityType="Self.çalışanbilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iletişim" EntityType="Self.iletişim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="izintalep" EntityType="Self.izintalep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanicigirişi" EntityType="Self.kullanicigirişi" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

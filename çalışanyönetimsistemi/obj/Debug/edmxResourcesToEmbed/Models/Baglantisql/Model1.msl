@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="çalışanyönetimsistemiModelStoreContainer" CdmEntityContainer="çalışanyönetimsistemiEntities">
+    <EntitySetMapping Name="admingirişi">
+      <EntityTypeMapping TypeName="çalışanyönetimsistemiModel.admingirişi">
+        <MappingFragment StoreEntitySet="admingirişi">
+          <ScalarProperty Name="adminid" ColumnName="adminid" />
+          <ScalarProperty Name="adminkullaniciadi" ColumnName="adminkullaniciadi" />
+          <ScalarProperty Name="adminşifre" ColumnName="adminşifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicigirişi">
+      <EntityTypeMapping TypeName="çalışanyönetimsistemiModel.kullanicigirişi">
+        <MappingFragment StoreEntitySet="kullanicigirişi">
+          <ScalarProperty Name="kullaniciid" ColumnName="kullaniciid" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+          <ScalarProperty Name="şifre" ColumnName="şifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

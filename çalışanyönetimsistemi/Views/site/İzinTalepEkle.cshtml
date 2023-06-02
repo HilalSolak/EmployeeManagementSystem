@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "İzinTalepEkle";
+    Layout = "~/Views/layout/layout.cshtml";
+}
+<title>İzin Talep</title>
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+        .container .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container video {
+            position: relative;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            width: auto;
+            height: auto;
+        }
+
+        .container .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            background: rgba(255,255,255,.7);
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+            .container .center h1 {
+                font-size: 25px;
+                text-align: center;
+                margin: 10px 0 20px;
+            }
+
+            .container .center input {
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                border: 2px solid #908686;
+                margin: 10px 0;
+                padding: 10px;
+                box-sizing: border-box;
+                background: transparent;
+                color: #262626;
+            }
+
+            .container .center a#login {
+                display: block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                background: #f44336;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                margin: 10px 0 10px;
+            }
+
+                .container .center a#login:hover {
+                    background: #03a9f4;
+                }
+
+            .container .center a {
+                color: #262626;
+            }
+
+                .container .center a:hover {
+                    color: #f44336;
+                }
+
+    .button {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background: #f44336;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 10px 0 10px;
+        height:50px;
+    }
+
+        .button:hover {
+            background: #03a9f4;
+        }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<form method="post">
+
+    <div class="container">
+        <div class="video-container">
+        </div>
+        <div class="center">
+            <h1>İzin Talep</h1>
+
+            <input type="text" name="çalışanad" placeholder="Çalışan Ad" required>
+            <input type="text" name="soyad" placeholder="Soyad" required>
+            <input type="tel" name="tc" maxlength="11" placeholder="Tc" required>
+            <input type="datetime-local" name="izinbaslangıctarihi" placeholder="İzin Başlangıç Tarihi" required>
+            <input type="number" name="istenilenizinmiktar" max="30" placeholder="İstenilen İzin Miktarı" required>
+            <input style="height:100px" name="açıklama" type="text" placeholder="Açıklama" required>
+            <button class="button"> İzin Talebi Oluştur</button>
+        </div>
+
+    </div>
+</form>

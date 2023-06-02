@@ -1,0 +1,91 @@
+﻿@using çalışanyönetimsistemi.Models.Baglantisql
+@model List<çalışanbilgileri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/layout/AdminLayout.cshtml";
+}
+
+<style>
+
+    .button2 {
+        width: 40px;
+        height: 20px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .güncellebuton {
+        width: 40px;
+        height: 20px;
+        background-color: green;
+        font-size: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        box-shadow: 0 5px 10px #e1e5ee;
+        background-color: white;
+        text-align: left;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    thead {
+        box-shadow: 0 5px 10px #e1e5ee;
+    }
+
+    th {
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    td {
+        padding: 1rem 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #2962ff;
+    }
+</style>
+
+<table>
+
+    <tr>
+        <th>ÇALIŞAN İD</th>
+        <th>ÇALIŞAN AD</th>
+        <th>SOYAD</th>
+        <th>TC</th>
+        <th>İŞE BAŞLAMA TARİHİ</th>
+        <th>GÖREVİ</th>
+        <th>MAAŞI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach (var veri in Model)
+        {
+        <tr>
+            <th>@veri.çalışanid</th>
+            <td>@veri.çalışanad</td>
+            <td>@veri.soyad</td>
+            <td>@veri.tc </td>
+            <td>@veri.işebaşlamatarihi</td>
+            <td>@veri.görev</td>
+            <td>@veri.maaş</td>
+            <td style="color:blue; font-size:25px;"><a href="/adminsite/SIL/@veri.çalışanid">SİL</a> </td>
+            <td style="color:blue; font-size:25px;"> <a href="/adminsite/ÇalışanBilgiGetir/@veri.çalışanid">GÜNCELLE</a> </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>
